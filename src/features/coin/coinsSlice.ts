@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import type { Coin } from '../../app/types'
 
 // Create a thunk to fetch coins from Api
 const ApiUrl = import.meta.env.VITE_COINSTATS_API_URL
@@ -19,18 +20,6 @@ export const fetchCoins = createAsyncThunk(
 );
 
 //Create Coins Slice
-interface Coin {
-    id: string;
-    icon: string;
-    name: string;
-    symbol: string;
-    price: number;
-    websiteUrl: string;
-    volume: number;
-    marketCap: number;
-    display: boolean;
-
-}
 
 interface CoinState {
     coins: Coin[];
