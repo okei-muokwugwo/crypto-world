@@ -1,7 +1,12 @@
-import Coin from './features/coin/Coin'
+import CoinList from '@/features/coin/CoinList'
+import '@/App.css'
+
 
 export const App = () => {
   return(
-    <Coin />
+    <div>
+      <h1>Welcome! <span className='italic text-teal-500'>Crypto World</span></h1>
+      <CoinList />
+    </div>
   )
 }
